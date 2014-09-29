@@ -1,0 +1,166 @@
+
+/*!
+ * Roots 6.5.2
+ */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+$bootstrap-sass-asset-helper: false;
+@import "bootstrap/bootstrap";
+@import "utilities";
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body { 
+   background: url(../img/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover;
+}
+
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.banner { }
+
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+
+.navbar{
+   .navbar-nav{
+      & > li{
+         text-align: right;
+         font-family: Open sans;
+         text-transform: uppercase;
+         font-weight: 600;
+         a{
+            padding:5px 5px;
+         }
+      }
+   }
+}
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content { 
+   background-color: #fff;
+}
+
+
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.main { }
+
+/* Gallery Shortcode */
+.gallery-row { padding: 15px 0; }
+
+
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar { }
+
+
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry time { }
+.hentry .byline { }
+.hentry .entry-content { }
+.hentry footer { }
+
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.content-info { }
+
+
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (min-width: $screen-sm-min) { }
+
+@media (min-width: $screen-md-min) { }
+
+@media (min-width: $screen-lg-min) { }
+
+@media (min-width: 768px) {
+   .navbar-collapse {
+    height: auto;
+    border-top: 0;
+    box-shadow: none;
+    max-height: none;
+    padding-left:0;
+    padding-right:0;
+    margin-left: 0px;
+    margin-right: 0px;
+   }
+   .navbar-collapse.collapse {
+    display: block !important;
+    width: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+   }
+   .navbar-collapse.in {
+    overflow-x: visible;
+   }
+
+   .navbar
+   {
+      max-width:300px;
+      margin-right: 0;
+      margin-left: 0;
+      height:100vh;
+   }  
+
+   .navbar-nav,
+   .navbar-nav > li,
+   .navbar-left,
+   .navbar-right,
+   .navbar-header
+   {float:none !important;}
+
+
+
+
+
+   .navbar-right .dropdown-menu {left:0;right:auto;}
+   .navbar-collapse .navbar-nav.navbar-right:last-child {
+       margin-right: 0;
+   }
+}
+
