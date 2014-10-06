@@ -5,8 +5,18 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
 $bootstrap-sass-asset-helper: false;
+
 @import "bootstrap/bootstrap";
+@import "compass/css3/hyphenation";
+@import "compass/css3/transition";
+@import "compass/css3/animation";
 @import "utilities";
+@import "maxime";
+
+$black: #000;
+$white: #fff;
+$blueBackground: #1d86c8;
+$baseFontSize: 14px;
 
 /* ==========================================================================
    Base
@@ -20,7 +30,9 @@ body {
    background-size: cover;
 }
 
-
+a{
+  color: #000;
+}
 
 /* ==========================================================================
    Header
@@ -33,6 +45,7 @@ body {
    ========================================================================== */
 
 .navbar{
+  
    .navbar-nav{
       & > li{
          text-align: right;
@@ -51,8 +64,51 @@ body {
    Content
    ========================================================================== */
 
-.content { 
-   background-color: #fff;
+.main-container{ 
+  background-color: rgba(255,255,255,0.7); 
+  min-height: 100vh;
+  .content{
+    .content-header{
+      > *{
+        padding:15px 0px;
+      }
+      ul{
+        float:right;
+        list-style: none;
+        margin:0px;
+        li{
+          display:inline-block;
+          margin-left: 15px;
+          position:relative;
+          font-size: 1.05em;
+          letter-spacing: 0.15em;
+          &:before{
+            content:"";
+            display:block;
+            width:2px;
+            height:20px;
+            background-color: #000;
+            position:absolute;
+            left:-10px;
+          }
+          &:first-child{
+            &:before{
+              display:none;
+            }
+          }
+          a{
+            font-weight: 400;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .main{
+      background-color: #FFF;
+      margin: 0px 0px 15px;
+    }
+  }
 }
 
 
@@ -75,6 +131,150 @@ body {
 .sidebar { }
 
 
+/* ==========================================================================
+   Calendar
+   ========================================================================== */
+
+.responsive-calendar {
+  .controls {
+    text-align: center;
+
+    a {
+      cursor: pointer;
+    }
+
+    h4 {
+      display: inline;
+    }
+  }
+
+  .day-headers, .days {
+    font-size: 0;
+  }
+
+  .day {
+    display: inline-block;
+    position: relative;
+    font-size: $baseFontSize;
+    width: 100/7%;
+    text-align: center;
+
+    a {
+      color: $black;
+      display: block;
+      cursor: pointer;
+      padding: 20% 0 20% 0;
+
+      &:hover {
+        //.box-shadow( inset 0px 0px 0px 1px rgba(170, 170, 170, 1) );
+        background-color: #eee;
+        text-decoration: none;
+      }
+    }
+
+    &.header {
+      border-bottom: 1px gray solid;
+    }
+
+    &.active {
+      a {
+        background-color: $blueBackground;
+        color: $white;
+
+        &:hover {
+          background-color: lighten($blueBackground, 10%);
+        }
+      }
+
+      .not-current {
+        background-color: lighten($blueBackground, 30%);
+        color: $white;
+
+        &:hover {
+          background-color: lighten($blueBackground, 40%);
+        }
+      }
+    }
+
+    &.not-current {
+      a {
+        color: #ddd;
+      }
+    }
+
+    .badge {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      z-index: 1;
+    }
+  }
+}
+
+/* ==========================================================================
+   Forum
+   ========================================================================== */
+
+.forum-square{
+  height:170px;
+  background-color: #F0F0F0;
+  border: solid 1px #ddd;
+  border-radius: 2px;
+  @include box-shadow(0px 0px 4px rgba(100,100,100,0.2));
+  padding:4%;
+  margin-bottom: 15px;
+  position:relative;
+  @include single-transition(all, 0.1s, fade,0);
+
+  .title{
+    font-weight: 400;
+    word-break: break-word;
+  }
+  .forum-description{
+    color:#777;
+  }
+  .forum-info{
+    position:absolute;
+    bottom:0px;
+    padding-bottom: 10px;
+    .num-topic{
+      color:#4ACFD6;
+    }
+    .time-updated{
+      margin-left: 10px;
+      color: #CA212F;
+    }
+  }
+  &:hover {
+    cursor: hand;
+    cursor: pointer;
+    background-color: darken(#F0F0F0,4%);
+    .title{
+      color: $brand-primary;
+    }
+    .forum-description{
+      color: lighten($brand-primary,5%);
+    }
+  }
+  a.divLink {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    /* Makes sure the link doesn't get underlined */
+    z-index: 10;
+    /* raises anchor tag above everything else in div */
+    background-color: white;
+    /*workaround to make clickable in IE */
+    opacity: 0;
+    /*workaround to make clickable in IE */
+    filter: alpha(opacity=0);
+    /*workaround to make clickable in IE */
+  }
+}
+
 
 /* ==========================================================================
    Posts
@@ -85,7 +285,6 @@ body {
 .hentry .byline { }
 .hentry .entry-content { }
 .hentry footer { }
-
 
 
 /* ==========================================================================
@@ -112,7 +311,19 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Media Queries
    ========================================================================== */
 
-@media (min-width: $screen-sm-min) { }
+@media (max-width: $screen-sm-min) { 
+
+.forum-square{
+  padding:5px;
+  .cover{
+    margin: 0px;
+    img{
+    
+    }
+  }
+}
+
+}
 
 @media (min-width: $screen-md-min) { }
 
@@ -141,6 +352,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
    .navbar
    {
+      position:fixed;
       max-width:300px;
       margin-right: 0;
       margin-left: 0;
@@ -153,10 +365,6 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    .navbar-right,
    .navbar-header
    {float:none !important;}
-
-
-
-
 
    .navbar-right .dropdown-menu {left:0;right:auto;}
    .navbar-collapse .navbar-nav.navbar-right:last-child {

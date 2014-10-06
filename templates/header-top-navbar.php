@@ -1,5 +1,5 @@
-<header class="banner navbar navbar-default navbar-static-top col-sm-3" role="banner">
-  <div class="navbar">
+<header class="banner navbar navbar-default navbar-static-top col-sm-3" role="banner" id="fixedit">
+  <!-- <div class="navbar"> -->
     <div class="navbar-header ">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
@@ -17,5 +17,5 @@
         endif;
       ?>
     </nav>
-  </div>
+  <!-- </div> -->
 </header>

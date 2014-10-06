@@ -1,0 +1,214 @@
+//////////////////////////////////////
+//				FORUM				//
+//////////////////////////////////////
+
+// Couleur forum 
+#bbpress-forums{
+	overflow:visible;
+	div.odd,
+	ul.odd{
+		background-color: #E2E2E2;
+	}
+}
+
+#bbpress-forums {
+	div.even,
+	ul.even{
+		background-color: white;
+	}
+}
+
+// Bouton Subscribe
+a.subscription-toggle{
+	color: red;
+}
+a.subscription-toggle:hover{
+	font-weight: bold;
+	}
+
+// COLOR HEADER
+#bbpress-forums li.bbp-header{
+	background: white;
+}
+
+// COLOR FOOTER
+#bbpress-forums  li.bbp-footer{
+		background: white;
+	}
+
+// Légende Header Forum
+#bbpress-forums{
+	li.bbp-header, 
+	li.bbp-footer{
+		border: none;
+	}
+}
+
+//STYLE LEGENDE FORUM & TOPIC
+.legende-titre-forum, .legende-titre-topic{
+	font-size: 1.3em;
+}
+
+.bbp-forum-title{
+	font-size: 1.5em;
+}
+
+// Style titre sous-forum
+a.bbp-topic-permalink{
+	font-size: 1.3em;
+}
+
+a.bbp-topic-permalink:hover{
+	text-decoration: none;
+	color:$brand-primary;
+}
+
+#subscription-toggle{
+	padding-left: 40px;
+	font-size: 1.15em;
+	
+}
+//style forum 
+#bbpress-forums{ 
+	ul.bbp-lead-topic, 
+	ul.bbp-topics, 
+	ul.bbp-forums, 
+	ul.bbp-replies, 
+	ul.bbp-search-results{
+		border: none;
+	}
+}
+
+
+///////////////////////////////////////
+//			BOUTON DROPDOWN			//
+//////////////////////////////////////
+
+#dropdownMenu1 {
+	padding: 6px 6px;
+	margin-bottom: 10px;
+}
+
+#textdropdown{
+	font-size: 1.0em;
+}
+
+#bbpress-forums{
+	ul{
+		&.dropdown-menu{
+			background: #fff;
+		}
+	}
+}
+
+
+///////////////////////////////////////
+//				REPLY    			//
+//////////////////////////////////////
+
+#bbpress-forums div.bbp-the-content-wrapper textarea.bbp-the-content{
+	background-color: #F7F7F7;
+}
+
+#bbp_topic_title{
+	background-color: #F7F7F7;
+}
+#bbp_topic_tags{
+	background-color: #F7F7F7;
+}
+
+.bbp-forum-header a.bbp-forum-permalink, 
+.bbp-topic-header a.bbp-topic-permalink, 
+.bbp-reply-header a.bbp-reply-permalink{
+	color : #00F;
+}
+
+span.bbp-admin-links a{
+	color: #666;
+}
+
+.bbp-topic-revision-log-item a img{
+	display: none;
+
+}
+
+.bbp-topic-description a img{
+	display: none;
+}
+
+///////////////////////////////////////
+//				TOPICS   		   	//
+//////////////////////////////////////
+
+#bbpress-forums {
+	.bbp-forum-info .bbp-forum-content,
+	p.bbp-topic-meta{
+		margin: 0px;
+	}
+}
+
+#bbpress-forums {
+	div.bbp-forum-author,
+	 div.bbp-topic-author,
+	 div.bbp-reply-author{
+	 	border-right: solid 2px #EBEBEB;
+	}
+}
+
+.bbp-topic-meta .bbp-topic-freshness-author, 
+.bbp-topic-reply-count,
+.bbp-topic-voice-count{
+	line-height: 30px;
+}
+
+#bbpress-forums p.bbp-topic-meta span a.bbp-author-avatar{
+	float: left;
+	padding-bottom:8px
+}
+
+#bbpress-forums p.bbp-topic-meta img.avatar{
+	border: 3px solid #eee;
+}
+
+li.bbp-forum-info, li.bbp-topic-title{
+	width: 48%;
+}
+
+.bbp-topic-Activity{
+	text-align: center;
+	float: left;
+	width: 10%
+}
+
+.bbp-topic-started-by .bbp-author-avatar{
+	display: none;
+}
+
+.bbp-topic-started-by{
+	font-size: 0.8em;
+}
+
+#bbpress-forums li.bbp-body ul.forum, #bbpress-forums li.bbp-body ul.topic{
+	padding: 5px;
+	padding-left: 8px;
+}
+
+.forum-titles{
+	line-height: 30px;
+	color: #858585;
+}
+
+.bbp-pagination{
+	margin-bottom: 0px;
+}
+
+#bbpress-forums {
+	ul.bbp-lead-topic, 
+	ul.bbp-topics, 
+	ul.bbp-forums, 
+	ul.bbp-replies, 
+ 	ul.bbp-search-results{
+ 		margin-bottom: 0px;
+ 	}
+ }
+

@@ -23,7 +23,8 @@ module.exports = function(grunt) {
         },
         files: {
           'assets/css/main.min.css': [
-            'assets/sass/app.scss'
+            'assets/sass/app.scss',
+            'assets/sass/maxime.scss'
           ]
         }
       }
