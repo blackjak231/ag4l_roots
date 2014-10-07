@@ -7,7 +7,7 @@
     </div>
   <![endif]-->
 
-  <div class="container" role="document">
+  <div class="container" id="" role="document">
     
     <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="Inscription" aria-hidden="true">
       <div class="modal-dialog modal-lg">
@@ -19,7 +19,7 @@
             </button>
             <h4 class="modal-title" id="myModalLabel">Inscription</h4>
           </div>
-          <form method="post" action="<?php site_url('wp-login.php?action=register', 'login_post')?>" class="">
+          <form onsubmit="return submitForm(this);" method="post" action="<?php site_url('wp-login.php?action=register', 'login_post')?>" class="">
           <div class="modal-body">
             <?php custom_register_form(); ?>
           </div>
@@ -67,14 +67,14 @@
               <div class="col-sm-12 content-header">
                 <ul>
                   <?php if ( !is_user_logged_in() ) : ?>
-                    <li><a href="<?php //echo wp_login_url( get_permalink() ); ?>" data-toggle="modal" data-target="#login-modal">S'identifier</a></li>
-                    <li><a href="<?php //echo wp_registration_url(); ?>" data-toggle="modal" data-target="#register-modal">S'inscrire</a></li>
+                    <li><a href="<?php //echo wp_login_url( get_permalink() ); ?>" class="no-ajaxy" data-toggle="modal" data-target="#login-modal">S'identifier</a></li>
+                    <li><a href="<?php //echo wp_registration_url(); ?>" class="no-ajaxy" data-toggle="modal" data-target="#register-modal">S'inscrire</a></li>
                   <?php else : ?>
                     <li><a href="<?php echo wp_logout_url( home_url() ); ?>">Se déconnecter</a></li>
                   <?php endif; ?>
                 </ul>
               </div>
-              <main class="main <?php echo roots_main_class(); ?>" role="main">
+              <main class="main <?php echo roots_main_class(); ?>" id="ajax_app" role="main">
                 <?php include roots_template_path(); ?>
               </main><!-- /.main -->
               <?php if (roots_display_sidebar()) : ?>
@@ -90,5 +90,6 @@
       <?php wp_footer(); ?>
     </div>
   </div><!-- /.wrap -->
+
 </body>
 </html>

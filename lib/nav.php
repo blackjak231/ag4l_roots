@@ -77,7 +77,7 @@ function roots_nav_menu_args($args = '') {
   $roots_nav_menu_args['container'] = false;
 
   if (!$args['items_wrap']) {
-    $roots_nav_menu_args['items_wrap'] = '<ul class="%2$s">%3$s</ul>';
+    $roots_nav_menu_args['items_wrap'] = '<ul id="menu" class="%2$s">%3$s</ul>';
   }
 
   if (current_theme_supports('bootstrap-top-navbar') && !$args['depth']) {

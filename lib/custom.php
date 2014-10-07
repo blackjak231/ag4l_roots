@@ -87,3 +87,11 @@ function custom_register_form(){
     echo $reg_form;
 }
 
+function test_ajax(){
+    header("Content-Type: application/json");
+    $posts_array = $get_posts();
+    echo json_encode($posts_array);
+    die();
+}
+add_action("wp_ajax_nopriv_test_ajax","test_ajax");
+add_action("wp_ajax_test_ajax","test_ajax");

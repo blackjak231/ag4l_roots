@@ -1,6 +1,41 @@
 //////////////////////////////////////
 //				FORUM				//
 //////////////////////////////////////
+//zone user 
+.simple-profile-img img{
+	position: relative;
+	display:inherit;
+	float: left;
+	border: solid 2px #ddd;
+	border-radius: 0px;
+	white-space: nowrap;
+	margin-bottom: 20px;
+	margin-right: 10px;
+
+}
+.simple-profile-p p{
+	margin: 0 0 0 0px;
+}
+
+.user-display-name{
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.simple-profile-p .bbp-user-forum-role{
+	font-size: 1.1em;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.simple-profile-p .bbp-user-topic-count{
+	font-size: 0.8em;
+}
+
+
+.simple-profile-p .bbp-user-reply-count{
+	font-size: 0.8em;
+}
 
 // Couleur forum 
 #bbpress-forums{
